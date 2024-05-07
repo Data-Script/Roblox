@@ -1,0 +1,20 @@
+local Key = "0c171fcb8ce71c8ba487"
+local Hwid = game:GetService("RbxAnalyticsService"):GetClientId()
+--// HWID User \\--
+local id =  "0c171fcb-ffc7-42a9-8dd8-8ce71c8ba487",      "e087029d-8ecd-42f2-9769-191382eff182"
+
+--// User Not In Whitelist \\--        
+function blacklist()
+game.Players.LocalPlayer:Kick("You Are Not On Our White List")
+end
+
+--// Script Whitelist\\--
+function whitelist()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Data-Script/Roblox/main/Notification"))()
+end
+--// keys \\--
+if id == Hwid and Key == "0c171fcb8ce71c8ba487" then
+    whitelist()
+else
+blacklist()
+end
